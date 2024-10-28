@@ -1,70 +1,142 @@
 @import url('https://fonts.googleapis.com/css?family=Barriecito|Do+Hyeon&display=swap');
 
-/* 
-	Fonts used:
-	font-family: 'Barriecito', cursive;
-	font-family: 'Do Hyeon', sans-serif;
-*/
-
+/* General Body Styling */
 body {
-	background-color: black;
-	color: white;
-	font-size: 16px;
-	font-family: 'Do Hyeon', sans-serif;
+  background-color: black; /* Dark background for a bold look */
+  color: white;
+  font-family: 'Do Hyeon', sans-serif; /* Minimal font for text */
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  max-width: 1200px; /* Limit the width of the entire body for readability */
+  margin: 0 auto; /* Center the content on the page */
 }
 
+/* Styling for Headers */
 h1, h2, h3 {
-	font-family: 'Barriecito', cursive;
+  font-family: 'Barriecito', cursive;
+  color: white;
+  margin-bottom: 10px;
 }
 
 h1 {
-	font-size: 2.5em;
+  font-size: 2.5em;
+  padding-bottom: 10px;
 }
 
 h2 {
-	font-size: 1.75em;
+  font-size: 1.75em;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
 }
 
 h3 {
-	font-size: 1.5em;
+  font-size: 1.5em;
+  margin-top: 10px;
 }
 
+/* Paragraphs and Text Blocks */
 p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin: 10px 0;
+  padding: 0 10px;
+}
 
+/* Section Styling with Padding and Borders */
+#section-about, #section-discography, #section-equipment {
+  padding: 20px;
+  margin: 20px;
+  border: 2px double red; /* Borders to distinguish sections */
+}
+
+/* Image Styling and Floats */
+.album-art, .image-electronics, .image-stage-effects {
+  float: left; /* Float images to the left of text */
+  margin: 10px 20px 10px 0; /* Spacing between image and text */
+  border: 2px double red 
+  ;
 }
 
 .album-art {
-
-}
-
-.clear {
-	clear: both;
+  width: 100px;
+  height: 100px;
+  object-fit: fill;
+  padding: 20px;
 }
 
 .image-electronics, .image-stage-effects {
-	
+  width: 200px;
+  height: auto;
+  padding: 20px;
+}
+
+/* Clearfix for Floats */
+.clear {
+  clear: both;
+}
+
+/* Track List Styling */
+.track-list {
+  list-style-type: disc;
+  padding-left: 40px;
+  margin: 10px 0;
+}
+
+.track-list li {
+  padding: 0px;
+  margin: 0px;
 }
 
 .record-label {
-
+  color: red; /* Change text color to red */
+  font-style: italic;
 }
 
-.track-list {
-
-}
-
-#about-photo {
-
-}
-
-#copyright {
-
-}
-
-#section-about, #section-discography, #section-equipment {
-
-}
-
+/* Intro Text Box */
 #text-intro {
-	
+  background-color: rgba(70, 68, 68, 0.8);
+  padding: 15px;
+  margin: 20px;
+  font-size: 1.2em;
+  border: 2px solid red;
+  color: red;
+}
+
+/* About Photo Styling */
+#about-photo {
+  width: 300px;
+  height: 200px;
+  padding: 20px;
+  margin: 20px;
+  border: 2px double red;
+  float: left;
+}
+
+/* Footer Styling */
+#copyright {
+  
+  font-size: 0.8em;
+  color: red;
+  margin-top: 30px;
+  padding-top: 10px;
+  
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .album-art, .image-electronics, .image-stage-effects {
+    width: 100%;
+    height: auto;
+    float: none; /* Disable floats for smaller screens */
+    margin: 10px 0;
+  }
+
+  #about-photo {
+    width: 80%;
+  }
+
+  body {
+    padding: 10px;
+  }
 }
